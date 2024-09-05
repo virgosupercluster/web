@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
       <div class="logo">Aritro</div>
@@ -21,16 +21,24 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <h1>Hello, I'm Aritro</h1>
-    <p>Web Developer & Designer</p>
-    <a href="#about" class="btn">Learn More</a>
+<!-- Hero Section with Video Background -->
+<section id="hero">
+    <video autoplay muted loop id="hero-video">
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+      <source src="assets/hero-bg.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Hello, I'm Aritro</h1>
+      <p>Web Developer & Designer</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a web developer with a passion for creating beautiful and functional websites.</p>
+    <p>I am a web developer with a passion for creating beautiful and functional websites as well as customer focused intuitive designs for user satisfaction</p>
   </section>
 
   <!-- Projects Section -->
@@ -38,15 +46,15 @@
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <h3>Project 1</h3>
+        <h3>Project WebCrawl</h3>
         <p>A description of the first project.</p>
       </div>
       <div class="project-card">
-        <h3>Project 2</h3>
+        <h3>Project Anomaly Detection</h3>
         <p>A description of the second project.</p>
       </div>
       <div class="project-card">
-        <h3>Project 3</h3>
+        <h3>Project Recognizo</h3>
         <p>A description of the third project.</p>
       </div>
     </div>
@@ -67,4 +75,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
