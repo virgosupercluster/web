@@ -1,49 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio showcasing the work of Aritro, a web developer and designer.">
+    <meta name="keywords" content="web developer, designer, portfolio, projects">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Aritro</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div id="progressBar"></div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Aritro</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-<!-- Hero Section with Video Background -->
-<section id="hero">
-    <video autoplay muted loop id="hero-video">
-      <source src="assets/hero-bg.mp4" type="video/mp4">
-      <source src="assets/hero-bg.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content">
-      <h1>Hello, I'm Aritro</h1>
-      <p>Web Developer & Designer</p>
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="overlay"></div>
+        <video autoplay muted loop id="hero-video">
+            <source src="assets/hero-bg.mp4" type="video/mp4">
+            <source src="assets/hero-bg.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1 class="fade-in">Hello, I'm Aritro</h1>
+            <p class="fade-in">Web Developer & Designer</p>
+            <a href="#about" class="btn fade-in">Learn More</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>&darr;</span>
+        </div>
+    </section>
+    
 
-<!-- About Section with fade-in effect -->
-<section id="about"
-    class="fade-in">
-    <h2>About Me</h2>
-    <p>I am a web developer with a passion for creating beautiful and functional websites as well as customer focused intuitive designs for user satisfaction</p>
-</section>
+    <!-- About Section with fade-in, Photo and Info Cards -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p></p>
+    </section>
+    <section id="about">
+        <div class="about-container">
+            <!-- Left side: Photo inside a frame -->
+            <div class="about-photo">
+                <img src="assets/IMG_9058-2.jpg" alt="Your Photo">
+            </div>
 
-<!-- Updated Projects Section with fade-in effect -->
-<section id="projects" class="fade-in">
+            <!-- Right side: Cards with experience, projects, and other info -->
+            <div class="about-info">
+                <div class="info-card">
+                    <h3>Experience</h3>
+                    <p>5+ years in web development and design.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Projects Completed</h3>
+                    <p>Worked on over 30 successful projects.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Other Info</h3>
+                    <p>Specialized in front-end development, UI/UX design, and responsive design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with fade-in effect -->
+    <!-- <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project-grid">
         <div class="project-card">
@@ -59,22 +93,80 @@
             <p>Developed a motion detection application for Raspberry Pi using OpenCV to capture video input and detect motion with artificial contours. Automated the saving and uploading of motion-detected images to Google Drive, along with email notifications to users. Integrated a real-time GUI for motion display, utilizing a separate process to boost efficiency.</p>
         </div>
     </div>
-</section>
+</section> -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+    
+            <!-- Development Projects Section -->
+            <div class="projects-column">
+                <h3>Development Projects</h3>
+                <div class="project-card">
+                    <h4>Fintech WebCrawl</h4>
+                    <p>The Fintech crawler monitors real-time changes in key financial metrics, including stock prices,
+                        market trends, earnings reports, and economic indicators from various financial websites. By
+                        analyzing these fluctuations, it generates actionable insights, enabling users to make informed
+                        investment decisions based on the latest market movements.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Anomaly Detection</h4>
+                    <p>Detects Anomaly in the network traffic predicting malicious content/destinations and flagging off
+                        system early to prevent attacks</p>
+                </div>
+                <div class="project-card">
+                    <h4>Recognizo</h4>
+                    <p>Developed a motion detection application for Raspberry Pi using OpenCV to capture video input and
+                        detect motion with artificial contours. Automated the saving and uploading of motion-detected
+                        images to Google Drive, along with email notifications to users. Integrated a real-time GUI for
+                        motion display, utilizing a separate process to boost efficiency.</p>
+                </div>
+            </div>
+    
+            <!-- Design Projects Section -->
+            <div class="projects-column">
+                <h3>Design Projects</h3>
+                <div class="project-card">
+                    <h4>EIT Bot</h4>
+                    <p>Designed a responsive UI for a bot marketplace web application.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Salesforce Bot</h4>
+                    <p>Created an intuitive chatbot UI for a Salesforce Bot.</p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to get in touch with me for any project collaborations or development ideas.</p>
+        <a href="mailto:aritrokin@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://bit.ly/aritrok" target="_blank" rel="noopener noreferrer" class="btn">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+        </a>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to get in touch with me for any project collaborations or development ideas.</p>
-    <a href="mailto:aritrokin@gmail.com" class="btn">Email Me</a>
-    <a href="https://bit.ly/aritrok" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+    </section>
 
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Aritro Kar. All Rights Reserved.</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2024 Aritro Kar. All Rights Reserved.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    };
+</script>
