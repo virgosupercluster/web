@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
   body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -185,10 +184,10 @@
   
   .project-card {
     background-color: #f4f4f4;
-    padding: 30px;
-    width: 30%;
-    margin: 20px 0;
-    border-radius: 5px;
+    padding: 40px; /* Increase padding for more space inside the card */
+    width: 45%; /* Increase width to allow more content */
+    margin: 20px auto; /* Center cards and add space between them */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -199,8 +198,8 @@
   }
   
   .project-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
   
   /* Contact Section */
@@ -232,30 +231,46 @@
   }
   
   /* Media Queries for Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      margin-top: 15px;
-    }
-  
-    .nav-links li {
-      margin: 10px 0;
-    }
-  
-    .project-card {
-      width: 100%;
-    }
-  
-    #about p {
-      width: 90%;
-    }
-  
-    #hero h1 {
-      font-size: 2.5rem;
-    }
+/* Improved mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  #about p {
+    width: 90%;
+  }
+}
+  /* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
   
