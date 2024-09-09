@@ -171,12 +171,13 @@
     };
     function changeSectionBackground() {
     const sections = document.querySelectorAll("section");
-    const scrollPosition = window.scrollY + window.innerHeight / 2; // Current position in the middle of the screen
+    const scrollPosition = window.scrollY; // Current scroll position from the top of the page
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
+      const sectionTop = section.offsetTop; // Distance of the section from the top of the page
       const sectionHeight = section.offsetHeight;
 
+      // Check if the user has scrolled to this section
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         // Change background color based on the section in view
         if (section.id === "hero") {
@@ -188,9 +189,18 @@
         } else if (section.id === "contact") {
           document.body.style.backgroundColor = "#333"; // Dark background for contact section
         }
+
+        // Debug: Print the current section ID to the console
+        console.log("Current section: ", section.id);
       }
     });
   }
+
+  // Attach event listeners for scroll
+  window.addEventListener("scroll", changeSectionBackground);
+
+  // Trigger the background change when the page first loads (in case user starts mid-scroll)
+  window.addEventListener("load", changeSectionBackground);
 
   // Attach event listeners for scroll
   window.addEventListener("scroll", changeSectionBackground);
