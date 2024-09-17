@@ -9,3 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
   
+document.addEventListener
+("contextmenu", function (e){
+  e.preventDefault();
+}, false)
